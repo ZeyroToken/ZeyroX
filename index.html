@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZeyroCoin - Next Gen Crypto</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="icon" href="assets/images/logo.png" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Zeyro Logo" class="logo-img" />
+      <span>ZEYRO</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#tokenomics">Tokenomics</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to ZEYRO</h1>
+      <p>The Future of Crypto is Decentralized, Transparent & Built For You.</p>
+      <a href="#about" class="btn-primary">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About ZEYRO</h2>
+    <p>
+      ZEYRO is a next-gen decentralized token crafted for speed, scalability, and community. Born out of meme culture, powered by real utility.
+    </p>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" class="section-alt">
+    <h2>Roadmap</h2>
+    <div class="timeline">
+      <div class="timeline-item"><strong>Q1 2025</strong> - Token Launch</div>
+      <div class="timeline-item"><strong>Q2 2025</strong> - Exchange Listings</div>
+      <div class="timeline-item"><strong>Q3 2025</strong> - NFT Marketplace</div>
+      <div class="timeline-item"><strong>Q4 2025</strong> - Zeyro Wallet App</div>
+    </div>
+  </section>
+
+  <!-- TOKENOMICS -->
+  <section id="tokenomics" class="section">
+    <h2>Tokenomics</h2>
+    <div class="chart-container">
+      <canvas id="tokenChart"></canvas>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section-alt">
+    <h2>Our Team</h2>
+    <div class="team-grid">
+      <div class="member">
+        <img src="assets/images/ceo.jpg" alt="CEO" />
+        <h3>Pranu</h3>
+        <p>Founder & CEO</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <h2>FAQs</h2>
+    <details>
+      <summary>What is ZEYRO?</summary>
+      <p>A decentralized meme token with actual use cases in DeFi and NFTs.</p>
+    </details>
+    <details>
+      <summary>How to buy ZEYRO?</summary>
+      <p>You can purchase Zeyro on PancakeSwap using BNB or through our partners.</p>
+    </details>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 ZEYRO. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://youtube.com/@Moneystar-120" target="_blank">
+          <img src="assets/logos/YouTube.svg" alt="YouTube">
+        </a>
+        <a href="https://www.instagram.com/zeyro_token?igsh=M3MwcnFraTkyaHhr " target="_blank">
+          <img src="assets/logos/Instagram.svg" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CHART SCRIPT -->
+  <script>
+    const ctx = document.getElementById('tokenChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Liquidity', 'Marketing', 'Team', 'Community'],
+        datasets: [{
+          label: 'Token Allocation',
+          data: [40, 20, 15, 25],
+          backgroundColor: ['#ff007a', '#00c6ff', '#ffaa00', '#00ff95']
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            labels: { color: '#ffffff' }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
